@@ -1,0 +1,33 @@
+/* from https://pyscript.net/releases/2025.3.1/core.css */
+mpy-config,mpy-script,py-config,py-script {display:none}
+.mpy-editor-box,.py-editor-box{padding:.5rem}
+.mpy-editor-input,.py-editor-input{position:relative}
+.mpy-editor-box:before,.py-editor-box:before{content:attr(data-env);display:block;font-size:20vw;text-align:end}
+.mpy-editor-output,.py-editor-output{white-space:pre}
+.mpy-editor-run-button,.py-editor-run-button{bottom:.5rem;display:flex;opacity:0;padding:0;position:absolute;right:.5rem;transition:opacity .25s;z-index:1}
+.mpy-editor-box:hover .mpy-editor-run-button,.mpy-editor-run-button.running,.mpy-editor-run-button:focus,.py-editor-box:hover .py-editor-run-button,.py-editor-run-button.running,.py-editor-run-button:focus{opacity:1}
+mpy-terminal span,py-terminal span{letter-spacing:0!important}
+dialog.pyscript-fs{border-radius:8px;border-width:1px}
+dialog.pyscript-fs>div{display:flex;justify-content:space-between}
+
+/* custom */
+body { font-size: 100%; }
+h1   { font-size:5em; }
+p,input,div { font-size:3em; }
+#gen_button {
+    font-size:3em;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 1em;
+    color: coral;
+    background-color: gray;
+    box-shadow: 0 0.1em #987;
+}
+#gen_button:hover {background-color: blue !important;}
+#gen_button:active {
+    background-color: blue !important;;
+    box-shadow: 0 0.05em #998;
+    transform: translateY(0.15em);
+}

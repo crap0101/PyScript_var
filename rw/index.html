@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <py-config> 
+      [[fetch]] 
+      files = ["./usr_share_dict_italian.txt"]
+    </py-config>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>Random Words</title>
+      <link rel="stylesheet" href="./rw.css">
+      <script type="module" src="https://pyscript.net/releases/2024.5.1/core.js"></script>
+  </head>
+  <body>
+    <h1>generates random words</h1>
+    <p>choose number...</p>
+    <input type="number" id="words_number" name="number of words" min="2" max="20" value="5" font-size="medium"/>
+    <button id="gen_button" py-click="random_words">{loading}</button>
+    <script>
+      window.addEventListener("py:all-done", (event) => {
+	  let b = document.getElementById("gen_button");
+	  b.style.backgroundColor = "green";
+	  b.textContent = "Generate!";
+      });
+    </script>
+    <div id="output"></div>
+    <script type="py" src="./main.py"></script>
+    <!-- <script type="py" src="./main.py" config="./pyscript.json"></script> -->
+  </body>
+</html>
